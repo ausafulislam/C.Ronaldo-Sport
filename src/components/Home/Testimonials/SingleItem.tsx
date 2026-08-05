@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const SingleItem = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
-    <div className="shadow-testimonial bg-white rounded-[10px] py-7.5 px-4 sm:px-8.5 m-1">
+    <div className="shadow-testimonial bg-white rounded-[10px] py-7.5 px-4 sm:px-8.5 m-1 w-[340px] max-w-full min-h-[300px] flex flex-col">
       <div className="flex items-center gap-1 mb-5">
         <Image
           src="/images/icons/icon-star.svg"
@@ -40,7 +40,7 @@ const SingleItem = ({ testimonial }: { testimonial: Testimonial }) => {
 
       <p className="text-dark mb-6">{testimonial.review}</p>
 
-      <a href="#" className="flex items-center gap-4">
+      <a href="#" className="flex items-center gap-4 mt-auto">
         <div className="w-12.5 h-12.5 rounded-full overflow-hidden">
           <Image
             src={testimonial.authorImg}

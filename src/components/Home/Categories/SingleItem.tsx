@@ -5,8 +5,8 @@ import Image from "next/image";
 const SingleItem = ({ item }: { item: Category }) => {
   return (
     <a href="#" className="group flex flex-col items-center">
-      <div className="max-w-[130px] w-full bg-[#EFEEE8] h-32.5 rounded-full flex items-center justify-center mb-4">
-        <Image src={item.img} alt="Category" width={82} height={62} className="object-contain" />
+      <div className="w-[130px] h-[130px] bg-[#EFEEE8] rounded-full flex items-center justify-center mb-4 overflow-hidden">
+        <Image src={item.img} alt="Category" width={82} height={62} className="w-full h-full object-contain" />
       </div>
 
       <div className="flex justify-center">

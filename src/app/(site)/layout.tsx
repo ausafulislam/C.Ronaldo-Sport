@@ -13,7 +13,6 @@ import CartSidebarModal from "@/components/Common/CartSidebarModal";
 import { PreviewSliderProvider } from "../context/PreviewSliderContext";
 import PreviewSliderModal from "@/components/Common/PreviewSlider";
 
-import ScrollToTop from "@/components/Common/ScrollToTop";
 import PreLoader from "@/components/Common/PreLoader";
 import WhatsAppButton from "@/components/Common/WhatsAppButton";
 import { Toaster } from "react-hot-toast";
@@ -50,7 +49,6 @@ export default function RootLayout({
                 </ModalProvider>
               </CartModalProvider>
             </ReduxProvider>
-            <ScrollToTop />
             <Toaster position="top-center" reverseOrder={false} />
             <Footer />
             <WhatsAppButton />
