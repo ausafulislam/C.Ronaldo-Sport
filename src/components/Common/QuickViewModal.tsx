@@ -66,7 +66,7 @@ const QuickViewModal = () => {
         } fixed top-0 left-0 overflow-y-auto no-scrollbar w-full h-screen sm:py-20 xl:py-25 2xl:py-[230px] bg-dark/70 sm:px-8 px-4 py-5`}
     >
       <div className="flex items-center justify-center ">
-        <div className="w-full max-w-[1100px] rounded-xl shadow-3 bg-white p-7.5 relative modal-content">
+        <div className="w-full max-w-[1100px] rounded-xl shadow-3 bg-white p-4 sm:p-7.5 relative modal-content">
           <button
             onClick={() => closeModal()}
             aria-label="button for close modal"
@@ -91,8 +91,8 @@ const QuickViewModal = () => {
 
           <div className="flex flex-wrap items-center gap-12.5">
             <div className="max-w-[526px] w-full">
-              <div className="flex gap-5">
-                <div className="flex flex-col gap-5">
+              <div className="flex flex-col sm:flex-row gap-5">
+                <div className="flex flex-row sm:flex-col gap-5 order-2 sm:order-1">
                   {product.imgs.thumbnails?.map((img, key) => (
                     <button
                       onClick={() => setActivePreview(key)}
@@ -111,7 +111,7 @@ const QuickViewModal = () => {
                   ))}
                 </div>
 
-                <div className="relative z-1 overflow-hidden flex items-center justify-center w-full sm:min-h-[508px] bg-gray-1 rounded-lg border border-gray-3">
+                <div className="relative z-1 overflow-hidden flex items-center justify-center w-full min-h-[280px] sm:min-h-[508px] bg-gray-1 rounded-lg border border-gray-3 order-1 sm:order-2">
                   <div>
                     <button
                       onClick={handlePreviewSlider}
